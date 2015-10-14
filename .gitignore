@@ -3,3 +3,4 @@ backup/
 cache/
 images/
 vendor/
+.idea/
