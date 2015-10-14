@@ -1,0 +1,230 @@
+/*
+ * SwiftOtter_Base is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * SwiftOtter_Base is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with SwiftOtter_Base. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Copyright: 2015 (c) SwiftOtter Studios
+ *
+ * @author Jesse Maxwell
+ * @copyright Swift Otter Studios, 9/29/15
+ * @package default
+ */
+
+.fa-linkedin-square {
+  background-color: #3fb1a3;
+  color: #fff;
+}
+
+/* === Banner === */
+#banner.custom-image {
+  background: no-repeat center #222;
+  background-size: cover;
+}
+
+#banner {
+  div & .inner {
+    @media (min-width: 736px) {
+      width: 550px;
+      max-width: 100%;
+    }
+    
+    background: rgba(53, 53, 53, 0.66);
+
+    header {
+      h2 {
+        font-size: 2em;
+        line-height: 1;
+        padding: 0.5em 0;
+      }
+    }
+  }
+}
+
+header {
+  sup {
+    font-size: 0.5em;
+    top: -1em;
+  }
+}
+
+
+// Specificity Wars
+.content header.article-header {
+  margin-bottom: 1em;
+}
+
+.article {
+  &-title {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  &-meta {
+    color: lighten(#7c8081, 15);
+    font-style: italic;
+    font-size: 0.85em;
+    margin-bottom: 0;
+  }
+
+  &-footer {
+    border-left: 3px solid #ededed;
+    padding-left: 0.5em;
+  }
+
+  &-taxonomy {
+    display: inline-block;
+    padding-right: 1em;
+  }
+}
+
+.separator {
+  margin: 3em 0;
+  border: 1px solid #ddd;
+}
+
+/* === Controls === */
+.float {
+  &-left {
+    float: left;
+    padding: 1em 1em 1em 0;
+
+    &.border {
+      padding: 0;
+      margin: 1em 1em 1em 0;
+    }
+
+    &.half {
+      max-width: 50%;
+      @media (max-width: 720px) {
+        display: none;
+      }
+    }
+  }
+
+  &-right {
+    float: right;
+    padding: 1em 0 1em 1em;
+
+    &.border {
+      padding: 0;
+      margin: 1em 0 1em 1em;
+    }
+
+    &.half {
+      @extend .float-left.half;
+    }
+  }
+}
+
+.align {
+  &-center {
+    clear: both;
+    display: block;
+    margin: 1em auto;
+  }
+}
+
+.column {
+  &-image {
+    max-width: 100%;
+    padding-top: 1em;
+  }
+}
+
+.overflow {
+  overflow: auto;
+}
+
+.container {
+  img {
+    max-width: 100%;
+  }
+}
+
+.border {
+  border: 6px solid transparent;
+  outline: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* === Footer === */
+footer#footer {
+  padding: 2em 2em 0 2em;
+}
+
+.dedication {
+  padding: 0.8em;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto !important;
+}
+
+.verse {
+  p {
+    margin-bottom: 0.5em;
+  }
+
+  cite {
+    color: lighten(#7c8081, 15);
+    text-align: right;
+    display: block;
+    font-style: italic;
+  }
+}
+
+/* === Sidebar === */
+.sidebar {
+  .image.featured {
+    img {
+      width: auto;
+      max-width: 100%;
+    }
+
+    &::before {
+      content: '';
+      background: none;
+    }
+  }
+}
+
+/* === Skel Override === */
+body .row > * {
+  padding: 40px 20px 0;
+}
+
+body .row.centered-override {
+  margin: 0;
+
+  > * {
+    padding-top: 0;
+  }
+}
+
+/* === General Overrides === */
+body p {
+  margin-bottom: 1em;
+}
+
+body .wrapper.style4 {
+  padding: 2em 4em;
+}
+
+body .style4.wide {
+  padding: 2em 0 1em;
+}
+
+.antispam-div {
+  display: none;
+}

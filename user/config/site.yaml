@@ -1,0 +1,78 @@
+title: 'Tally Target'
+author:
+  name: 'Jesse Maxwell'
+  email: 'jesse@swiftotter.com'
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Tally Target theme is an extension of Twenty by HTML5. It provides a number of improvements in quality and features.'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects:
+  /redirect-test: /
+  '/old/(.*)': /new/$1
+routes:
+  /something/else: /blog/sample-3
+  '/new/(.*)': /blog/$1
+blog:
+  route: /blog
+email: jesse@swiftotter.com
+description: 'Tally Target is a Christian company that is focused on improving your leadership. We believe in building you up because we see your potential. Take your next step. Empower yourself by joining us today!'
+social:
+  - label: Twitter
+    url: 'https://twitter.com/TallyTarget'
+    icon: twitter
+  - label: Facebook
+    url: 'https://www.facebook.com/TallyTarget'
+    icon: facebook
+  - label: Google+
+    url: 'https://plus.google.com/+Tallytarget/posts/p/pub'
+    icon: google-plus
+  - label: LinkedIn
+    url: 'https://www.linkedin.com/company/tally-target?trk=biz-companies-cym'
+    icon: linkedin-square
+copyright:
+  line1: 'Tally Target'
+  line2: 'Design:'
+  url: 'http://html5up.net'
+  url_label: 'HTML5 UP'
+footer:
+  text: 'Dedicated to all those who give their lives in defense of freedom and truth.'
+logo:
+  text1: 'Tally Target'
+  text2: ' - Creating Leaders'
+menu:
+  - text: Information
+    link: get-started
+    children:
+      - text: Blog
+        link: /blog
+      - text: About
+        link: /about
+      - text: Resources
+        link: /resources
+      - text: Health
+        link: /health
+  - text: 'Get Started'
+    link: get-started
+    button_class: 'special button'
+buttons:
+  - text: 'Sign Up'
+    link: '#'
+verses:
+  - text: 'The thief comes only to steal and kill and destroy; I have come that they may have life, and have it to the full.'
+    reference: 'John 10:10 (NIV)'
+  - text: 'Then He said to them, ''Follow Me, and I will make you fishers of men.'''
+    reference: 'Matthew 4:19 (NKJV)'
+  - text: 'For what is a man profited, if he shall gain the world, and lose his own soul? ...'
+    reference: 'Matthew 16:26 (KJV)'
+  - text: 'For physical training is of some value, but godliness has value for all things, holding promise for both the present life and the life to come.'
+    reference: '1 Timothy 4:8 (NIV)'
+  - text: 'Not to us, Lord, not to us but to your name be the glory, because of your love and faithfulness.'
+    reference: 'Psalm 115:1 (NIV)'
+  - text: 'The earth is the Lord''s, and everything in it, the world, and all who live in it; ...'
+    reference: 'Psalm 24:1 (NIV)'

@@ -1,0 +1,17 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<article id="main">
+    {#<header class="container{% if not page.header.style %} special{% endif %}">
+        <span class="icon {% if page.header.icon == 'default' %}fa-thumbs-up{% else %}fa-{{ page.header.icon }}{% endif %}"></span>
+        <h2>{{ page.header.title }}</h2>
+    </header>#}
+
+    <section class="wrapper style4 container {% if not page.header.container.class %}80%{% else %}{{ page.header.container.class }}{% endif %}">
+        <h2>{{ page.header.title }}</h2>
+        <div class="content">
+          {{ page.content }}
+        </div>
+    </section>
+</article>
+{% endblock %}

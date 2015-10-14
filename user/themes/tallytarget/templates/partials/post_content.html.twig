@@ -1,0 +1,37 @@
+<div class="content">
+    <section>
+        {% if page.header.featured_image %}
+            <a href="#" class="image featured"><img src="{{ page.media[page.header.featured_image].url }}" alt="{{ page.header.featured_alt }}" /></a>
+        {% endif %}
+        <header class="article-header">
+            {#{{ dump(page) }}#}
+            <h2 class="article-title"><a href="{{ page.route }}">{{ page.header.title }}</a></h2>
+            {% if page.header.date %}
+                <p class="article-meta">Posted on {{ page.header.date }}</p>
+            {% endif %}
+        </header>
+
+        {{ page.content }}
+
+        <footer class="article-footer">
+            <span class="category article-taxonomy">
+                {% if page.header.taxonomy.category %}
+                    <span class="icon fa-folder"></span>
+                    {% for category in page.header.taxonomy.category %}
+                    <a href="/blog/category:{{ category }}">{{ category }}</a>{% if not loop.last %},{% endif %}
+                {% endfor %}
+                {% else %}
+                    No categories are associated with this post.
+                {% endif %}
+            </span>
+            <span class="tag article-taxonomy">
+                {% if page.header.taxonomy.tag %}
+                    <span class="icon fa-tag"></span>
+                    {% for tag in page.header.taxonomy.tag %}
+                    <a href="/blog/tag:{{ tag }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+                {% endfor %}
+                {% endif %}
+            </span>
+        </footer>
+    </section>
+</div>

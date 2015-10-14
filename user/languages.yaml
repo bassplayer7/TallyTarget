@@ -1,0 +1,4 @@
+RECAPTCHACONTACT:
+    FORM_LEGEND: "Contact Tally Target"
+    SUBJECT: "New contact from Grav site!"
+    RECIPIENT: "jesse@swiftotter.com"

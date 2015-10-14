@@ -1,0 +1,13 @@
+<section class="wrapper container style4 wide 80%">
+    <div class="row centered-override">
+        {% for cell in page.header.columns %}
+            {% set class = cell.class ?: page.header.class %}
+            {% set alt = cell.alt ?: cell.text %}
+
+            <div class="{{ class }}">
+                <img src="{{ page.media[cell.src].url }}" alt="{{ alt }}" />
+                <h3>{{ cell.text }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+</section>

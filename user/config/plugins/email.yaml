@@ -1,0 +1,7 @@
+from: 'jpmowing@gmail.com'
+mailer:
+    engine: gmail
+    smtp:
+        server: smtp.gmail.com
+        user: 'jpmowing@gmail.com'
+        password: 'iudhmqbcswmzvkci'

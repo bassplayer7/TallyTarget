@@ -1,0 +1,12 @@
+{% set taxlist = taxonomylist.get() %}
+
+{% if taxlist %}
+
+<span class="tags">
+    {{ dump(config.plugins.taxonomylist.route) }}
+    {% for tax,value in taxlist[taxonomy] %}
+        <a href="{{ base_url }}{{ config.plugins.taxonomylist.route }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax|e('url') }}">{{ tax }}</a>
+
+    {% endfor %}
+</span>
+{% endif %}

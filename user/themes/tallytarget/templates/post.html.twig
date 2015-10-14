@@ -1,0 +1,16 @@
+{% extends('./partials/base.html.twig') %}
+
+{% block content %}
+    {{ dump(page) }}
+    {% set test = page.parent.collection() %}
+    <article id="main">
+        <section class="wrapper style4 container">
+            {% include 'partials/post_content.html.twig' with {'page': page} %}
+
+            <p></p>
+
+            <a href="{{ site.blog.route }}" class="button small">Return to blog</a>
+        </section>
+    </article>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+email: 'jeff.prickitt@yahoo.com'
+fullname: 'Jeffrey Prickitt'
+title: 'Site Owner'
+password: 'rR9j6}uJpd(YiF>K2WiHj2ALw'
+access:
+  admin:
+    login: true
+    super: true

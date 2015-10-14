@@ -1,0 +1,39 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
+{% set collection = page.collection() %}
+{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+
+
+{% block content %}
+    {{ page.content }}
+    {% for module in collection %}
+        {% if module.menu == 'before_article' %}
+            {{ module.content }}
+        {% endif %}
+    {% endfor %}
+    <article id="main">
+        {% if page.header.subtitle or page.header.description or page.header.icon %}
+            <header class="special container">
+                <span class="icon fa-{{ page.header.icon }}"></span>
+                <h2>{{ page.header.subtitle }}</h2>
+                <p>{{ page.header.description }}</p>
+            </header>
+        {% endif %}
+
+        {% if page.header.layout == 'column' %}
+            {% include 'partials/modular_column.html.twig' with {'collection': collection, 'header': page.header} %}
+        {% else %}
+            {% for module in collection %}
+                {% if module.menu != 'before_article' and module.menu != 'after_article' %}
+                    {{ module.content }}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </article>
+    {% for module in collection %}
+        {% if module.menu == 'after_article' %}
+            {{ module.content }}
+        {% endif %}
+    {% endfor %}
+{% endblock %}

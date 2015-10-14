@@ -1,0 +1,10 @@
+<li class="{% if menu.children|length %}submenu{% endif %} {% if menu.class %}{{ menu.class }}{% endif %}">
+    <a href="{{ menu.link }}" {% if menu.button_class %}class="{{ menu.button_class }}"{% endif %}>{{ menu.text }}</a>
+    {% if menu.children|length %}
+        <ul>
+            {% for child in menu.children %}
+                {% include 'partials/menu_item.html.twig' with {'menu' : child} only %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

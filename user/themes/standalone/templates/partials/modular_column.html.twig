@@ -1,0 +1,19 @@
+{% if header.class %}
+    {% set section_class = header.class %}
+{% else %}
+    {% set section_class = 'wrapper style4 container 80%' %}
+{% endif %}
+
+<section class="{{ section_class }}">
+    <h2>{{ header.title }}</h2>
+    <div class="row 150%">
+        {% for module in collection %}
+            <div class="{{ module.header.class }}">
+                {{ module.content }}
+                {% if not module.content %}
+                    {{ module.row_content }}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>

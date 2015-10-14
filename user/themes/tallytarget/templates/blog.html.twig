@@ -1,0 +1,34 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set collection = page.collection() %}
+
+{% block content %}
+    <article id="main">
+        <header class="special container">
+            <span class="icon fa-{{ page.header.icon }}"></span>
+            <h2>{{ page.header.title }}</h2>
+            <p>{{ page.header.subtitle }}</p>
+        </header>
+        <section class="wrapper style4 container">
+            <div class="row 150%">
+                <div class="8u 12u(narrower)">
+                    {% for item in collection %}
+                        <article>
+                            {% include 'partials/post_content.html.twig' with {'page': item, 'parent': page} %}
+                        </article>
+                        {% if not loop.last %}
+                            <div class="separator"></div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                {% if page.header.sidebar_modules %}
+                    <div class="4u 12u(narrower)">
+                        {% include 'partials/sidebar.html.twig' %}
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+        {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+    </article>
+
+{% endblock %}

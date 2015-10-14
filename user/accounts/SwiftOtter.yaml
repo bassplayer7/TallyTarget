@@ -1,0 +1,11 @@
+email: jesse@swiftotter.com
+fullname: 'Jesse Maxwell'
+title: 'Site Admin'
+access:
+  admin:
+    login: true
+    super: true
+language: en
+authenticated: true
+hashed_password: $2y$10$GvZ8CUE9hcJUIIySRR2yhOl6F5oIETQWTt4AW.dhT1ovi/tNS5vBe
+reset: '7382ede702d9bd0bc20af8561067156e::1445014087'

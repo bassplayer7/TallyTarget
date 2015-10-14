@@ -1,0 +1,30 @@
+<div class="sidebar">
+    {% for module in page.header.sidebar_modules %}
+        <section>
+            {% if module.featured_image %}
+                <a href="{{ module.featured_image.link }}" class="image featured"><img src="{{ page.media[module.featured_image.src].url }}" alt="" /></a>
+            {% endif %}
+            <header>
+                <h3>{{ module.title }}</h3>
+            </header>
+            <p>{{ module.content }}</p>
+            {% if module.buttons %}
+                <footer>
+                    <ul class="buttons">
+                        {% for button in module.buttons %}
+                            <li><a href="{{ button.url }}" class="button small">{{ button.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </footer>
+            {% endif %}
+        </section>
+    {% endfor %}
+    <section>
+        <h3>Tags:</h3>
+        {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
+    </section>
+    <section>
+        <h3>Archives</h3>
+        {% include 'partials/archives.html.twig' %}
+    </section>
+</div>
